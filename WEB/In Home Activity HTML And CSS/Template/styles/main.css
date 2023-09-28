@@ -17,24 +17,33 @@ section {
   flex-flow: column;
 }
 
-#avatar img {
+section #avatar img {
   max-width: 100%;
   border-radius: 50%;
   
 }
 
-h2 {
+section h1 {
+   padding:0%;
+   margin-bottom: 0%;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: lighter;
+  font-size:large;
   color: rgb(143, 141, 138);
 }
 
-#label {
+section #label {
+  margin-top: 0;
   color: white;
   background-color: rgb(119, 190, 11);
 }
 
 
-.bio {
+section .bio {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,18 +51,20 @@ h2 {
   padding-bottom: 10px;
 }
 
-.bio a {
+section .bio a {
   margin-left: 10px;
   border-bottom: 2px solid #EEEEEE
 }
 
-section .user-info #details,   #joined {
+section .user-info #details, #joined {
   border-bottom: 2px solid #EEEEEE;
+  
 }
 
 section .user-info #details, p {
   display: inline-block;
   margin-left: 10px;
+  margin-top: 0;
 }
 
 section .user-info #git-info {
