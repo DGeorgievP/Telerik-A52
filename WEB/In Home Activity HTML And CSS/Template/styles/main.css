@@ -1,11 +1,20 @@
 body {
-  background-color: rgb(228, 221, 213);
+  background-color: rgb(255, 252, 249);
   font-family: Helvetica;
   font-size: 16px;
   margin: 30px;
   width: 400px;
   height: 200px;
   text-align: center;
+}
+
+section {
+  width: 270px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: column;
 }
 
 #avatar img {
@@ -24,12 +33,44 @@ h2 {
   background-color: rgb(119, 190, 11);
 }
 
+
 .bio {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid #EEEEEE;
+  padding-bottom: 10px;
 }
 
 .bio a {
   margin-left: 10px;
+  border-bottom: 2px solid #EEEEEE
+}
+
+section .user-info #details,   #joined {
+  border-bottom: 2px solid #EEEEEE;
+}
+
+section .user-info #details, p {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+section .user-info #git-info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 11px;
+  color: #A08F76;
+  margin-top: 10px;
+  border-bottom: 2px solid #EEEEEE;
+  text-align: center;
+}
+section .user-info #git-info span {
+  display: block;
+  color: #4078C0;
+  font-size: 28px;
+  font-weight: bold;
+}
+section .user-info #git-info .following {
+  margin-bottom: 10px;
 }
