@@ -15,7 +15,7 @@
 }
 
 body {
- background-color: rgb(87, 72, 34)
+ background-color: black
   
 }
 
@@ -122,10 +122,12 @@ h2 {
 
 .todo {
     border: 2px solid transparent; /* Set an initial transparent border */
-    background: linear-gradient(45deg, red, green, blue); /* Create an RGB gradient background */
+    background: linear-gradient(45deg, violet, orange, yellow, green, cyan, blue, violet); /* Create an RGB gradient background */
     background-size: 200% 200%; /* Increase the background size to create a gradient effect */
-    animation: rgbLights 4s linear infinite; /* Animate the gradient background */
+    animation: rgbLights 5s linear infinite ; /* Animate the gradient background */
     color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Add an outline to the text */
+
   }
   
   @keyframes rgbLights {
