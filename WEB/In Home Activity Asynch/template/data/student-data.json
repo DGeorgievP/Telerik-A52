@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Pesho", "city": "Sofia", "grades": [4, 5, 5, 3, 6] },
+  { "id": 2, "name": "Gosho", "city": "Plovdiv", "grades": [5, 6] },
+  { "id": 3, "name": "Vanya", "city": "Varna", "grades": [4, 4, 5] }
+]
