@@ -20,13 +20,13 @@ new Promise(function (resolve, reject) {
             const pendingTasks = data.tasks.filter((task) => task.status === 'pending')
             const doneTasks = data.tasks.filter((task) => task.status === 'done')
 
-            const writePending = reader.write('data/tasks.pending.json', JSON.stringify(pendingTasks))
-            const writeDone = reader.write('data/tasks.done.json', JSON.stringify(doneTasks))
+            const writePending = reader.write('data/tasks.pending.json', JSON.stringify({pendingTasks}, null, 2))
+            const writeDone = reader.write('data/tasks.done.json', JSON.stringify({doneTasks}, null, 2))
 
             return Promise.all([writePending, writeDone])
         })
         .then(() => {
             console.log('Data written successfully')
         })
-        .catch(logError())
+        .catch(logError)
 })

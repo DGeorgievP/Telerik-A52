@@ -1,13 +1,19 @@
-[
-  {
-    "id": 2,
-    "name": "Convert text to data readable from JavaScript",
-    "status": "pending"
-  },
-  {
-    "id": 5,
-    "name": "In case of any error handle the error and log it to 'default.log'",
-    "status": "pending"
-  },
-  { "id": 6, "name": "Have fun", "status": "pending" }
-]
+{
+  "pendingTasks": [
+    {
+      "id": 2,
+      "name": "Convert text to data readable from JavaScript",
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "name": "In case of any error handle the error and log it to 'default.log'",
+      "status": "pending"
+    },
+    {
+      "id": 6,
+      "name": "Have fun",
+      "status": "pending"
+    }
+  ]
+}
