@@ -35,7 +35,7 @@ export class FileHandler {
 
     return new Promise((resolve, reject) => {
 
-      fs.writeFile(filename, data, { encoding: 'utf-8' }, function (err) {
+      fs.writeFile(filename, data, { encoding: 'utf-8', flag: 'a' }, function (err) {
 
         if (err) {
           return reject(new Error(`Error writing file`))

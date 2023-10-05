@@ -2,6 +2,16 @@ import { FileHandler } from './services/file-handler.js';
 
 const reader = new FileHandler();
 
+function logError(err) {
+    const errMessage = `${err.message}\n`;
+    const errReader = reader.read('logs/default.log')
+
+    .then((data) => {
+        const logFile = errMessage + data
+        return reader.write('logs/default.log', logFile)
+    })
+}
+
 new Promise(function (resolve, reject) {
 
     reader.read('data/tasks.all.json', 'utf-8')
@@ -16,9 +26,7 @@ new Promise(function (resolve, reject) {
             return Promise.all([writePending, writeDone])
         })
         .then(() => {
-            resolve('Data written successfully')
+            console.log('Data written successfully')
         })
-        .catch((error) => {
-            reader.write('logs/default.log', error.message)
-        })
+        .catch(logError())
 })
