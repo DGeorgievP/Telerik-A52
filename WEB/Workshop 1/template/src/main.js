@@ -19,7 +19,6 @@ new Promise(function (resolve, reject) {
             resolve('Data written successfully')
         })
         .catch((error) => {
-            console.error(error)
-            reject(error)
+            reader.write('logs/default.log', error.message)
         })
 })
