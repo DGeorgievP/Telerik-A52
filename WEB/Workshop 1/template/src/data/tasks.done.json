@@ -1,1 +1,13 @@
-[]
+[
+  { "id": 1, "name": "Read all tasks", "status": "done" },
+  {
+    "id": 3,
+    "name": "Separate tasks to 'pending' and 'done'",
+    "status": "done"
+  },
+  {
+    "id": 4,
+    "name": "Write pending tasks to 'tasks.pending.json' and done tasks to 'tasks.done.json', but do writing both files in parallel",
+    "status": "done"
+  }
+]
