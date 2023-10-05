@@ -14,12 +14,13 @@ export class FileHandler {
     filename = join(__dirname, '..', filename);
 
     return new Promise((resolve, reject) => {
-      
-      fs.readFile('data/tasks.all.json', { encoding: 'utf-8' }, function (err, data) {
+
+      fs.readFile(filename, { encoding: 'utf-8' }, function (err, data) {
 
         if (err) {
-          reject(new Error(`Error reading file`))
+          return reject(new Error(`Error reading file ${filename}`))
         } else {
+          console.log(`Successfully read ${filename}`)
           resolve(data)
         }
 
@@ -28,9 +29,20 @@ export class FileHandler {
   }
 
 
+
   write(filename = '', data = '') {
     filename = join(__dirname, '..', filename);
 
-    
+    return new Promise((resolve, reject) => {
+
+      fs.writeFile('filename', data, { encoding: 'utf-8' }, function(err) {
+        if(err) {
+          reject(new Error(`Error writing file`))
+        } else {
+          resolve()
+        }
+
+      })
+    })
   }
 }
