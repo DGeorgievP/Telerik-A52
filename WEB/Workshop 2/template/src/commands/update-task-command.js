@@ -1,3 +1,3 @@
+import { Command } from "./command";
 
-
-export class UpdateTaskCommand { }
+export class UpdateTaskCommand extends Command { }
