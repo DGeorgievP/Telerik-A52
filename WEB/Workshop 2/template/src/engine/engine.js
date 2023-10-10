@@ -15,11 +15,11 @@ export class TaskEngine {
     this.#commands.set(name, command);
   }
 
-  executeCommand(name, ...args) {
+  async executeCommand(name, ...args) {
     if (!this.#commands.has(name)) {
       throw new Error('Invalid command!');
     }
 
-    return this.#commands.get(name).execute(...args);
+    await this.#commands.get(name).execute(...args);
   }
 }
