@@ -8,7 +8,7 @@ export class AddTaskCommand extends Command {
 
         try {
             const newTask = new Task(name, status)
-            await super.taskRegistry.addTask(newTask)
+            this.taskRegistry.addTask(newTask)
             return 'Task added successfully'
 
         } catch (e) {
