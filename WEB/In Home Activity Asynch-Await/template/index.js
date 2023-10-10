@@ -15,3 +15,4 @@ import fs from 'fs/promises';
 
 fs.writeFile('data/student-data.json', JSON.stringify(studentRecords), { encoding: 'utf-8' })
 })
+().catch(console.error)
