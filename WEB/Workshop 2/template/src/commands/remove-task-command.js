@@ -7,9 +7,9 @@ export class RemoveTaskCommand extends Command {
 
     try {
       this.taskRegistry.removeTask(name)
-      return 'Task removed successfully!'
+      console.log ('Task removed successfully!')
     } catch (e) {
-      return `Problem with removing the task: ${e.message}`
+      console.log(`Problem with removing the task: ${e.message}`)
     }
 
   }

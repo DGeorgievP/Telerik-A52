@@ -16,7 +16,7 @@ export class ListTasksCommand extends Command {
             }
             
         } catch (e) {
-            return `Problem with listing tasks: ${e.message}`
+            console.log(`Problem with listing tasks: ${e.message}`)
         }
 
     }

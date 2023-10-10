@@ -27,6 +27,6 @@ const consoleIterator = new ConsoleIterator();
   for await (const line of consoleIterator) {
     const split = line.split(' ');
     taskEngine.executeCommand(split[0], split[1], split[2]);
-    console.log(line);
+    
   }
 })();
