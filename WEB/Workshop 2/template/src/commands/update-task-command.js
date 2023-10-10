@@ -16,6 +16,7 @@ export class UpdateTaskCommand extends Command {
 
             tasksToUpdate.status = updatedStatus
             return 'Task updated successfully'
+            
         } catch (e) {
             return`Problem with updating the task: ${e.message}`
         }
