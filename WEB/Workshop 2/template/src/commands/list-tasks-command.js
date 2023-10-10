@@ -10,7 +10,7 @@ export class ListTasksCommand extends Command {
             const filteredTasks = []
 
             for (const task of tasks) {
-                if (task.name.incudes(taskName)) {
+                if (task.name.includes(taskName)) {
                     filteredTasks.push(`Task: ${task.name} (${task.status})`)
                 }
             }
