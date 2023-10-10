@@ -9,12 +9,12 @@ export class UpdateTaskCommand extends Command {
             const tasks = this.taskRegistry.tasks;
             const tasksToUpdate = tasks.find(task => task.name === name)
 
-            if(tasksToUpdate === undefined) {
+            if(tasksToUpdate) {
+                tasksToUpdate.status = updatedStatus
+                console.log('Task updated successfully')
+            } else {
                 console.log(`Task with name ${name} doesn't exist!`)
             }
-
-            tasksToUpdate.status = updatedStatus
-            console.log('Task updated successfully')
 
         } catch (e) {
            console.log(`Problem with updating the task: ${e.message}`)
