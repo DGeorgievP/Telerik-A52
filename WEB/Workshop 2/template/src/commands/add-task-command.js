@@ -4,15 +4,15 @@ import { Command } from './command.js';
 
 export class AddTaskCommand extends Command {
     async execute(name, status) {
-        await wait(500);
-
+        
         try {
+            await wait(500);
+            const taskRegistry = this.taskRegistry
             const newTask = new Task(name, status)
-            this.taskRegistry.addTask(newTask)
-            return 'Task added successfully'
-
+            taskRegistry.addTask(newTask)
+            console.log('Task added successfully')
         } catch (e) {
-            return `Problem with adding the task: ${e.message}`
+            console.log(`Problem with adding the task: ${e.message}`)
         }
 
     }

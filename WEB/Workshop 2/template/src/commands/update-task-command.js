@@ -1,6 +1,5 @@
-import { Task } from '../models/task.js';
 import { wait } from '../utils/utils.js';
-import { Command } from "./command";
+import { Command } from './command.js';
 
 export class UpdateTaskCommand extends Command {
     async execute(name,updatedStatus) {
@@ -15,8 +14,8 @@ export class UpdateTaskCommand extends Command {
             }
 
             tasksToUpdate.status = updatedStatus
-            return 'Task updated successfully'
-            
+            console.log('Task updated successfully')
+
         } catch (e) {
             return`Problem with updating the task: ${e.message}`
         }
